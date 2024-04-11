@@ -1,0 +1,77 @@
+step 1.create README.md file
+README.md:
+------------
+# Namaste React🚀
+////////
+step 2: create index.html file and copy cdn links for react.development.js and react-dom.development.js files before our actual script
+index.html:
+------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css"/>
+    <title>Namaste React</title>
+</head>
+<body>
+    <div id="root">
+
+    </div>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="./App.js"></script>    
+</body>
+</html>
+//////////////
+step 3: App.js created
+APP.js:
+----------
+const parent = React.createElement("div",{id:"parent"},[
+    React.createElement("div",{id:"child"},
+    [React.createElement("h1",{},"h1 tag from  div child"),
+    React.createElement("h2",{},"h2 tag from child div")]),
+    React.createElement("div",{id:"child2"},
+    [React.createElement("h1",{},"h1 tag from  div child2"),
+    React.createElement("h2",{},"h2 tag from div child2 ")])
+
+]);
+console.log(parent);
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(parent)
+
+//////
+step4: index.css file createdand link in index.html file
+index.css:
+------------
+#child{
+    color: red;
+}
+//////////
+vsc =>terminal=> New Terminal =>
+PS \namaste-react> git init
+Initialized empty Git repository in D:/namaste-react/.git/
+PS \namaste-react> git branch -M main
+PS \namaste-react> git add .
+PS \namaste-react> git commit -m "episode-01"
+ 5 files changed, 56 insertions(+)
+ create mode 100644 App.js
+ create mode 100644 App2.js
+ create mode 100644 README.md
+ create mode 100644 index.css
+ create mode 100644 index.html
+PS \namaste-react> git remote add origin https://github.com/LakshmiP10/namaste-react.git
+PS \namaste-react> git push -u origin main
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (7/7), 1.12 KiB | 127.00 KiB/s, done.
+Total 7 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/LakshmiP10/namaste-react.git
+
+
+
+
+
+
